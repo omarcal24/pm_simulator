@@ -480,17 +480,18 @@ export default function RunPage() {
                 </div>
               ) : pendingGrade ? (
                 <div className="mt-3">
-                  <div className="grid grid-cols-2 gap-3 opacity-40 pointer-events-none">
+                  <div className="grid grid-cols-2 gap-3">
                     {run.kpis?.map((kpi) => (
-                      <MetricBadge
-                        key={kpi}
-                        label={kpi.replace(/_/g, ' ')}
-                        value={baselineMetrics[kpi] ?? '—'}
-                      />
+                      <div key={kpi} className="rounded-lg bg-slate-100 px-3 py-2">
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">
+                          {kpi.replace(/_/g, ' ')}
+                        </div>
+                        <div className="h-6 w-16 rounded bg-slate-200 animate-pulse" />
+                      </div>
                     ))}
                   </div>
-                  <p className="mt-3 text-xs text-amber-600 font-medium">
-                    Grade your decision to reveal KPI impact.
+                  <p className="mt-3 text-xs text-slate-500 italic">
+                    Grade your decision to see KPI impact.
                   </p>
                 </div>
               ) : (
