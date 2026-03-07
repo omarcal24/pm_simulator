@@ -1,0 +1,7 @@
+Django>=4.2,<5
+djangorestframework>=3.14,<4
+django-cors-headers>=4.3,<5
+psycopg[binary]>=3.1,<4
+django-environ>=0.11,<1
+openai>=1.66.0
+jsonschema>=4.20,<5

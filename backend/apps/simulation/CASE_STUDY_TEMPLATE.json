@@ -1,0 +1,280 @@
+{
+  "version": "1.0",
+  "sections": [
+    {
+      "key": "problem_statement",
+      "title": "Problem Statement",
+      "description": "Define the core problem you're solving. Be specific about who is affected, what the current situation is, and why it matters now.",
+      "guiding_questions": [
+        "What is the root problem — not just the symptom?",
+        "Who is affected and how severely?",
+        "What is the business or user cost if left unresolved?",
+        "What scope and constraints are you working within?"
+      ],
+      "placeholder": "e.g. B2B customers are dropping off at Step 3 of onboarding, causing a 15% decline in activation rate in Q3. This directly impacts expansion ARR and increases CS load.",
+      "required": true
+    },
+    {
+      "key": "assumptions",
+      "title": "Assumptions",
+      "description": "State the assumptions you're making upfront. Good answers are explicit about uncertainty — claiming certainty you don't have is a red flag.",
+      "guiding_questions": [
+        "What are you treating as given that you cannot currently prove?",
+        "What data or evidence would change your recommendation?",
+        "What constraints (time, resources, tech) are you accepting as fixed?"
+      ],
+      "placeholder": "e.g. I assume the drop-off is UX-related, not a bug. I assume engineering has ~2 sprints of capacity and that enterprise accounts behave differently from SMB.",
+      "required": false
+    },
+    {
+      "key": "goals_and_metrics",
+      "title": "Goals & Success Metrics",
+      "description": "Define what success looks like. Tie your solution to measurable outcomes, not vague intentions.",
+      "guiding_questions": [
+        "What is your primary success metric for this effort?",
+        "What guardrail metrics must not regress?",
+        "What is the target and by when?",
+        "How will you know if the solution is working in week 1? Week 4?"
+      ],
+      "placeholder": "e.g. Primary: activation rate back to 52%+ within 30 days. Guardrail: support ticket volume does not increase. Instrumentation: track Step 3 completion funnel.",
+      "required": true
+    },
+    {
+      "key": "user_perspective",
+      "title": "User / Customer Perspective",
+      "description": "Show that you understand the user's experience and needs behind the problem. The best solutions are grounded in who you're designing for.",
+      "guiding_questions": [
+        "Who is the primary user and what are they trying to accomplish?",
+        "Where does the current experience break down for them?",
+        "Are there meaningfully different user segments with different needs?",
+        "What would delight them vs. just fix the problem?"
+      ],
+      "placeholder": "e.g. Enterprise admins want to onboard their team quickly; confusion at Step 3 likely stems from unclear permission settings for multi-seat setups vs. solo users.",
+      "required": false
+    },
+    {
+      "key": "proposed_solution",
+      "title": "Proposed Solution",
+      "description": "Describe your recommendation clearly. A clear, explicit recommendation is required — don't bury the lead or end with 'it depends' without a follow-through decision.",
+      "guiding_questions": [
+        "What is your recommendation, in one sentence?",
+        "What are the key components of the solution?",
+        "What did you consider and reject, and why?",
+        "What would you do in Week 1 vs. later phases?"
+      ],
+      "placeholder": "e.g. Recommendation: ship a targeted fix to the Step 3 permission UI for enterprise accounts, with a fallback in-app guide. This addresses the highest-impact segment first within existing sprint capacity.",
+      "required": true
+    },
+    {
+      "key": "tradeoffs",
+      "title": "Prioritization & Trade-offs",
+      "description": "Explain what you're choosing not to do and why those trade-offs are acceptable. Good PM judgment is visible in what you deprioritize, not just what you choose.",
+      "guiding_questions": [
+        "What alternatives did you weigh?",
+        "What is the opportunity cost of your choice?",
+        "What are you deprioritizing and why is that acceptable right now?",
+        "How did you balance speed, scope, and quality?"
+      ],
+      "placeholder": "e.g. I chose a targeted fix over a full onboarding redesign. The redesign would take 6+ weeks and risk scope creep. The quick fix unblocks ~60% of affected users in one sprint.",
+      "required": false
+    },
+    {
+      "key": "execution_plan",
+      "title": "Execution Plan",
+      "description": "Describe how you'll deliver the solution. Be realistic about scope, sequencing, and who needs to be involved.",
+      "guiding_questions": [
+        "What are the key milestones and timeline?",
+        "What dependencies and risks could block delivery?",
+        "Who needs to be involved (eng, design, CS, legal, etc.)?",
+        "What's the rollout approach — phased, feature flag, full release?"
+      ],
+      "placeholder": "e.g. Week 1: discovery + design mockup. Week 2–3: build + QA. Week 4: staged rollout to 10% of enterprise accounts behind a flag. Week 5: full rollout if metrics hold.",
+      "required": false
+    },
+    {
+      "key": "risks",
+      "title": "Risks & Mitigations",
+      "description": "Identify what could go wrong and how you'd handle it. Proactively naming risks (and mitigations) is a strong signal of execution maturity.",
+      "guiding_questions": [
+        "What are the top 2–3 risks of this approach?",
+        "What is the mitigation or contingency for each?",
+        "What is your rollback plan if the solution backfires?",
+        "What would trigger you to change course mid-execution?"
+      ],
+      "placeholder": "e.g. Risk: the fix inadvertently breaks a legacy permission flow for a small enterprise segment. Mitigation: dark-launch behind a feature flag and validate with 2 pilot accounts first. Rollback: toggle the flag off.",
+      "required": false
+    },
+    {
+      "key": "reflection",
+      "title": "Reflection & Next Steps",
+      "description": "Show self-awareness about uncertainty and what you'd learn or validate post-launch. This section demonstrates intellectual honesty and continuous improvement mindset.",
+      "guiding_questions": [
+        "What would you validate in the first 2 weeks post-launch?",
+        "What is your biggest remaining uncertainty, and how would you resolve it?",
+        "What would you do differently with 2x the time or budget?",
+        "What surprised you or what would you investigate further?"
+      ],
+      "placeholder": "e.g. If activation improves for SMB but not enterprise, I'd investigate whether the root cause differs by segment and reconsider whether the fix was too narrowly scoped.",
+      "required": false
+    }
+  ],
+  "what_system_expects": {
+    "summary": "We evaluate the quality of your thinking, not whether you followed a rigid structure. A strong answer is specific, honest about trade-offs, and clear about what you know vs. assume. Depth over breadth: a focused, well-reasoned response scores higher than covering every section shallowly.",
+    "expectations": [
+      "Make a clear recommendation — don't leave it open-ended.",
+      "Be explicit about your assumptions and what would change your mind.",
+      "Connect your decision to at least one measurable outcome.",
+      "Acknowledge what you're deprioritizing and why it's an acceptable trade-off.",
+      "Be realistic about execution — timelines, dependencies, and risks matter.",
+      "Avoid claiming certainty you don't have; show structured thinking under uncertainty."
+    ],
+    "always_expected": [
+      "A clear recommendation",
+      "At least one success metric",
+      "Some acknowledgment of constraints or trade-offs"
+    ],
+    "valued_but_not_required": [
+      "Formal section headers matching this template",
+      "Covering every template section",
+      "Long responses — concise and precise is better than exhaustive"
+    ]
+  },
+  "scoring_dimensions": [
+    {
+      "key": "problem_framing",
+      "label": "Problem Framing",
+      "description": "How well you define the problem, its scope, and the user or business impact. Strong answers reframe the prompt with sharper insight rather than restating it.",
+      "good_signals": [
+        "Identifies root cause vs. symptom",
+        "Sets scope boundaries explicitly",
+        "Explains who is impacted and how severely"
+      ]
+    },
+    {
+      "key": "tradeoffs",
+      "label": "Decision Quality & Trade-offs",
+      "description": "Whether your recommendation is clear and whether you've considered alternatives and their costs. Picking the right option isn't enough — explaining why earns higher scores.",
+      "good_signals": [
+        "Makes a clear, explicit recommendation",
+        "Names and explains at least one rejected alternative",
+        "Addresses opportunity cost"
+      ]
+    },
+    {
+      "key": "evidence_assumptions",
+      "label": "Evidence & Assumptions",
+      "description": "Whether you're explicit about what you know vs. assume, and how you'd validate those assumptions. Don't claim certainty you don't have.",
+      "good_signals": [
+        "Lists key assumptions explicitly",
+        "Names what data would validate or invalidate them",
+        "Describes a discovery plan for high-uncertainty decisions"
+      ]
+    },
+    {
+      "key": "execution_realism",
+      "label": "Execution Realism",
+      "description": "Whether your plan is feasible given the scenario's constraints — timeline, team, dependencies, and risk. A great strategy with an impossible execution plan scores lower.",
+      "good_signals": [
+        "Proposes a phased or staged rollout",
+        "Identifies key dependencies and risks",
+        "Includes a rollback or mitigation plan"
+      ]
+    },
+    {
+      "key": "metrics_success",
+      "label": "Metrics & Success Criteria",
+      "description": "Whether you define what success looks like — with specific, measurable outcomes. Guardrail metrics (what must not worsen) are a bonus.",
+      "good_signals": [
+        "Defines a primary KPI with a target",
+        "Sets a timeframe for the expected outcome",
+        "Mentions at least one guardrail metric"
+      ]
+    }
+  ],
+  "scale": {
+    "0": "Not addressed or irrelevant",
+    "1": "Mentioned but vague — no reasoning, or major gaps",
+    "2": "Basic structure but incomplete trade-offs, assumptions, or feasibility",
+    "3": "Solid — clear recommendation with reasoning, addresses constraints",
+    "4": "Strong — good prioritization, risk mitigation, anticipates stakeholder concerns",
+    "5": "Excellent — expert-level judgment across all dimensions; a 5 is rare"
+  },
+  "scoring_notes": [
+    "Weights vary by case type and role. Some scenarios emphasize execution depth; others test strategic judgment.",
+    "If a scenario includes stakeholder roles, alignment with their concerns is also factored into the score.",
+    "Strong answers are not just 'correct' — they are well-reasoned, explicit about assumptions, and aware of trade-offs.",
+    "Absence of section headers is not penalized. Substance matters more than format.",
+    "A response without a clear recommendation cannot score above 2, regardless of other strengths."
+  ],
+  "role_overrides": {
+    "associate_pm": {
+      "label": "Associate PM",
+      "focus_note": "At this level, evaluators prioritize clarity of thinking, structured communication, and sound prioritization instincts. Show that you can break down a problem and reason through it step by step. You don't need to have seen this exact problem before — the goal is demonstrating a replicable thinking process.",
+      "section_hints": {
+        "proposed_solution": "Lead with a clear recommendation. It's okay to scope down to a simpler solution if you explain your reasoning clearly.",
+        "tradeoffs": "Show that you considered at least two options and can explain why you chose one over the other — even briefly.",
+        "execution_plan": "Even a rough timeline with 2–3 key milestones demonstrates execution awareness. You don't need full sprint planning.",
+        "reflection": "Acknowledging what you'd still want to learn shows intellectual honesty — this is valued at all levels."
+      },
+      "what_we_look_for": [
+        "Can you frame a problem clearly without a perfectly structured prompt?",
+        "Do you make a decision, or do you hedge without follow-through?",
+        "Are you honest about what you don't know?",
+        "Can you identify at least one concrete success metric?"
+      ]
+    },
+    "senior_pm": {
+      "label": "Senior PM",
+      "focus_note": "At this level, evaluators look for strategic judgment, stakeholder alignment, and execution depth. You're expected to navigate ambiguity confidently, make strong opinionated calls, and explicitly balance short-term delivery with long-term product health.",
+      "section_hints": {
+        "problem_statement": "Go beyond restating the prompt — bring a sharper hypothesis, segmentation insight, or strategic framing.",
+        "tradeoffs": "Address opportunity cost at the portfolio level, not just within this feature. Why this vs. other priorities?",
+        "execution_plan": "Show awareness of organizational complexity: dependencies, change management, rollout sequencing for different customer segments.",
+        "reflection": "Proactively identify what assumptions you'd test, how you'd build conviction, and what a 'version 2' might look like."
+      },
+      "what_we_look_for": [
+        "Is the framing crisp and insightful beyond what was handed to you?",
+        "Do trade-off discussions account for strategic alignment and opportunity cost?",
+        "Are stakeholder dynamics addressed proactively?",
+        "Is the execution plan realistic and multi-dimensional?"
+      ]
+    },
+    "ai_pm": {
+      "label": "AI Product Manager",
+      "focus_note": "AI product decisions carry unique risks and constraints. Evaluators look for awareness of model limitations, evaluation quality, human-in-the-loop design, and the distinction between what AI can do technically vs. what it should do in your specific product context.",
+      "section_hints": {
+        "assumptions": "Be explicit about model constraints — accuracy, latency, hallucination risk, data availability. Don't assume AI capabilities that aren't established for your context.",
+        "proposed_solution": "Describe the AI's role in the product and what happens when it fails or returns low-confidence outputs. Human-in-the-loop design is expected.",
+        "risks": "AI-specific risks to address: bias, model drift, regulatory/compliance exposure, edge cases, adversarial inputs. Name at least one explicitly.",
+        "goals_and_metrics": "Offline model metrics (precision, recall, F1) are not sufficient — define product-level success metrics and how you'd evaluate AI impact in production."
+      },
+      "what_we_look_for": [
+        "Do you distinguish between what AI can do technically vs. what's safe and appropriate to ship?",
+        "Do you define evaluation quality, monitoring, and human review requirements?",
+        "Are you aware of model drift, data quality issues, and feedback loop risks?",
+        "Do you address at least one regulatory, ethical, or compliance surface area?"
+      ]
+    },
+    "growth_pm": {
+      "label": "Growth PM",
+      "focus_note": "Growth problems require hypothesis-driven thinking, funnel fluency, and rigorous experiment design. Evaluators look for quantitative reasoning, clear metrics hierarchies, and an understanding of how growth levers interact.",
+      "section_hints": {
+        "problem_statement": "Frame the problem in terms of funnel stages or growth accounting (acquisition, activation, retention, revenue, referral).",
+        "proposed_solution": "Define the growth lever you're pulling and the hypothesis behind it. What behavior change are you expecting?",
+        "goals_and_metrics": "Define experiment design if applicable — sample size, duration, success threshold, and any confounders to control for.",
+        "risks": "Address experiment validity risks: novelty effect, survivorship bias, network effects, instrumentation error."
+      },
+      "what_we_look_for": [
+        "Is the growth lever clearly identified and justified?",
+        "Is the experiment or rollout designed to produce valid, actionable signal?",
+        "Are metrics defined with baselines, targets, and guardrails?",
+        "Are compounding or systemic effects of the growth move considered?"
+      ]
+    }
+  },
+  "example_good_outline": {
+    "title": "Example: Strong Associate PM Response Outline",
+    "note": "This is a fictional example of how a well-structured response might look. Substance matters more than format.",
+    "content": "**Recommendation:** Run a targeted experiment to fix the Step 3 permission UI for enterprise accounts, rolled out behind a feature flag.\n\n**Why this, not a full redesign:** A full onboarding redesign would take 6–8 weeks. The data points to Step 3 as the primary drop-off point for enterprise accounts specifically. Fixing one step first lets us validate the root cause with lower risk and faster learning.\n\n**Assumptions:** I'm assuming the drop is UX-related, not a backend bug (to be confirmed with eng). I'm also assuming enterprise and SMB users have different needs at this step.\n\n**Success metric:** Activation rate for enterprise accounts returns to 52%+ within 30 days of full rollout. Guardrail: support ticket volume doesn't increase.\n\n**Plan:** Week 1 — design mockup + validate with 2 enterprise customers. Week 2–3 — build + QA. Week 4 — 10% staged rollout behind a flag. Week 5 — full rollout if metrics hold. Rollback: toggle flag off.\n\n**Risks:** If the fix only helps SMB accounts, I'd revisit scope. If engineering bandwidth shrinks, I'd cut the in-app guide from scope and ship just the permission flow fix."
+  }
+}
