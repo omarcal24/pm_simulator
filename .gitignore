@@ -9,3 +9,10 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Development documentation
+*.md
+ADR/
+
+# Rubrics and grading rules
+**/GRADING_SCHEMA.json
