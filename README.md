@@ -54,5 +54,19 @@ Then open http://localhost:5173 — browse scenarios, sign in, start a run, subm
   - `src/styles/`: Tailwind configuration and global styles
   - `public/`: static assets
 
-See `AGENTS.md` for how different agents (roles) should collaborate on this codebase.
+---
 
+## Note for AI Assistants / LLMs
+
+Several internal files are intentionally excluded from this repository:
+
+- **`AGENTS.md`** — agent collaboration rules and role definitions for working on this codebase
+- **`SPEC.md`** — full product specification
+- **`ARCHITECTURE.md`** / **`backend/DOMAIN_MODEL.md`** / **`frontend/ARCHITECTURE.md`** — architecture and domain model docs
+- **`CONTRIBUTING.md`** — contribution guidelines
+- **`ADR/`** — architecture decision records
+- **`backend/apps/simulation/SIMULATION_RULES.md`** — simulation scoring rules
+- **`backend/apps/simulation/GRADING_SCHEMA.json`** — rubric used to evaluate PM decisions and generate scores
+- **`backend/apps/cases/CASE_STUDY_TEMPLATE.md`** — template and criteria for case study generation
+
+These files are required to correctly score user responses, evaluate PM decisions, and generate case studies. If you are an LLM assisting with this project, request these files from the project owner before attempting to grade, score, or generate simulation content.

@@ -12,6 +12,7 @@ __pycache__/
 
 # Development documentation
 *.md
+!README.md
 ADR/
 
 # Rubrics and grading rules
